@@ -1,0 +1,13 @@
+{
+  "environments": [
+    {
+      "name": "development",
+      "baseUrl": "https://playwright.dev/dotnet/docs/intro"
+    },
+    {
+      "name": "production",
+      "baseUrl": "https://playwright.dev/docs/intro"
+    }
+   
+  ]
+}
