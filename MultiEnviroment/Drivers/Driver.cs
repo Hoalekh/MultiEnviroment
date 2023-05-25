@@ -21,8 +21,11 @@ namespace MultiEnviroment.Drivers
         [BeforeScenario]
         public async Task BeforeScenario()
         {
+            string? currentDirectory = Directory.GetCurrentDirectory();
+            string? parentDirectory = Directory.GetParent(currentDirectory)?.Parent?.Parent?.FullName;
+            string jsonPath = Path.Combine(parentDirectory!, "Drivers", "specflow.json");
 
-            string jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "specflow.json");
+
             if (File.Exists(jsonPath))
             {
                 string json = File.ReadAllText(jsonPath);
