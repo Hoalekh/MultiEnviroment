@@ -1,0 +1,15 @@
+﻿<RunSettings>
+	<!-- Các cài đặt khác -->
+	<TestRunParameters>
+		<Parameter name="BaseUrl" value="https://playwright.dev/docs/intro" />
+	</TestRunParameters>
+	<!-- Các cài đặt khác -->
+	<Playwright>
+		<BrowserName>chromium</BrowserName>
+		<ExpectTimeout>5000</ExpectTimeout>
+		<LaunchOptions>
+			<Headless>false</Headless>
+			<Channel>chrome</Channel>
+		</LaunchOptions>
+	</Playwright>
+</RunSettings>

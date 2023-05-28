@@ -1,6 +1,7 @@
 using MultiEnviroment.Drivers;
 using MultiEnviroment.Page;
 using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 
 namespace MultiEnviroment.Steps
@@ -13,6 +14,7 @@ namespace MultiEnviroment.Steps
 
         public static string InstallationText => "//h1";
         public static string WritingTest => "//a[text()='Writing tests']";
+        public static string LanguageTest => "//div[@class='navbar__item dropdown dropdown--hoverable']";
      
         private readonly Driver _driver;
         private readonly HomePage homePage;
@@ -27,7 +29,9 @@ namespace MultiEnviroment.Steps
         public async Task GivenThePageDisplaysInformation(string installation)
         {
             Assert.IsTrue(await homePage.IsElementVisible(InstallationText));
+         
             Assert.AreEqual(await homePage.GetText(InstallationText), installation);
+          //  Assert.AreEqual(await homePage.GetText(LanguageTest), "Node.js");
            
         }
 
